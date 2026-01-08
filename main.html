@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HABI-LIN - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>HABI-LIN</h1>
+        <nav>
+            <a href="main.html">Dashboard</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="card" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <h2 id="welcomeMessage">Welcome, Weaver! 🧵</h2>
+                <p id="userRole" style="font-size: 0.9rem; color: #666;"></p>
+            </div>
+            <button class="btn" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🎨 My Patterns</h3>
+                <ul class="patterns-list" id="patternsList">
+                    <li>Loading patterns...</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📡 Device Status</h3>
+                <p id="deviceStatus">
+                    <span class="device-indicator"></span>
+                    Device: Not Connected
+                </p>
+                <button class="btn" onclick="connectDevice()">Connect Device</button>
+            </div>
+
+            <div class="card">
+                <h3>🎭 3D Visualization</h3>
+                <p>View patterns in interactive 3D</p>
+                <button class="btn" onclick="open3DViewer()">Open Viewer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Check if user is logged in, if not, redirect
+        auth.onAuthStateChanged(user => {
+            if (!user) window.location.href = 'login_signup.html';
+            else showDashboard(user);
+        });
+    </script>
+</body>
+</html>

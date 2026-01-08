@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HABI-LIN - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>HABI-LIN</h1>
+        <p>Learning, Integration, and Navigation</p>
+    </div>
+
+    <div class="container">
+        <div id="authSection" class="auth-section">
+            <div id="alertContainer"></div>
+            <h2 id="formTitle" style="margin-bottom: 1.5rem; color: var(--primary);">🧵 Weaver Login</h2>
+
+            <div class="form-group">
+                <label for="email">📧 Email Address</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">🔒 Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <div id="signupFields" style="display: none;">
+                <div class="form-group">
+                    <label for="role">👤 I am a:</label>
+                    <select id="role">
+                        <option value="traditional">Traditional Weaver</option>
+                        <option value="student">Weaving Student</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="displayName">✨ Full Name</label>
+                    <input type="text" id="displayName">
+                </div>
+            </div>
+
+            <button class="btn" id="mainAuthBtn" onclick="handleAuth()">Login</button>
+            <button class="btn btn-secondary" onclick="toggleAuthMode()">Sign Up</button>
+            <div style="margin-top: 15px; text-align: center;">
+                <a href="about.html" style="color: var(--primary); font-size: 0.8rem;">About the Project</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

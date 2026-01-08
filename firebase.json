@@ -1,0 +1,5 @@
+{
+  "database": {
+    "rules": "realtime_database.json"
+  }
+}
