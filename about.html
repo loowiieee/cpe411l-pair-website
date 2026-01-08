@@ -2,29 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About HABI-LIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | HABI-LIN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="header">
-        <h1>About HABI-LIN</h1>
-        <p>Preserving Culture Through Technology</p>
-    </div>
+<body class="about-page">
+    <header class="main-header">
+        <div class="logo">HABI<span>LIN</span></div>
+        <nav class="nav-links">
+            <a href="main.html">Dashboard</a>
+            <a href="about.html" class="active">About</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <div class="card">
+    <main class="container">
+        <section class="about-hero">
+            <h1>Preserving Culture Through Technology</h1>
+            <p class="lead-text">HABI-LIN (Learning, Integration, and Navigation) is a digital bridge between the heritage of the loom and the future of design.</p>
+        </section>
+
+        <div class="glass-card mission-card">
             <h3>Our Mission</h3>
-            <p>HABI-LIN (Learning, Integration, and Navigation) is dedicated to bridging the gap between traditional weaving techniques and modern digital tools.</p>
-            <br>
-            <h3>What we offer:</h3>
-            <ul style="margin-left: 20px; line-height: 1.6;">
-                <li><strong>Digital Archiving:</strong> Saving traditional patterns for future generations.</li>
-                <li><strong>3D Visualization:</strong> Helping weavers see patterns before the first thread is laid.</li>
-                <li><strong>Hardware Integration:</strong> Connecting looms to digital interfaces.</li>
-            </ul>
-            <br>
-            <a href="login_signup.html" class="btn">Back to Login</a>
+            <p>We empower traditional weavers by providing high-fidelity digital tools that respect the craftsmanship of the past while embracing the precision of the future. Our goal is to ensure that no pattern is ever lost to time.</p>
         </div>
-    </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">📁</span>
+                <h4>Digital Archiving</h4>
+                <p>Preserving ancestral patterns in high-resolution digital formats for future generations.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🧊</span>
+                <h4>3D Visualization</h4>
+                <p>Allowing artisans to simulate complex textiles before a single thread is ever spun.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">⚙️</span>
+                <h4>Hardware Integration</h4>
+                <p>Smart sensors and IoT connectivity that bring traditional looms into the digital age.</p>
+            </div>
+        </div>
+
+        <div class="action-footer">
+            <a href="login_signup.html" class="btn-outline">Return to Login</a>
+        </div>
+    </main>
 </body>
 </html>
