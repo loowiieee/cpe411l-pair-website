@@ -2,62 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HABI-LIN - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABI-LIN | Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>HABI-LIN</h1>
-        <nav>
-            <a href="main.html">Dashboard</a>
+    <header class="main-header">
+        <div class="logo">HABI<span>LIN</span></div>
+        <nav class="nav-links">
+            <a href="main.html" class="active">Dashboard</a>
             <a href="about.html">About</a>
+            <button class="btn-outline" onclick="logout()">Logout</button>
         </nav>
-    </div>
+    </header>
 
-    <div class="container">
-        <div class="card" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
-            <div>
-                <h2 id="welcomeMessage">Welcome, Weaver! 🧵</h2>
-                <p id="userRole" style="font-size: 0.9rem; color: #666;"></p>
+    <main class="container">
+        <section class="welcome-section">
+            <div class="welcome-text">
+                <h1 id="welcomeMessage">Welcome back, Weaver</h1>
+                <p id="userRole" class="subtitle">Artisan Account</p>
             </div>
-            <button class="btn" onclick="logout()">Logout</button>
-        </div>
+            <div class="status-chip">
+                <span class="dot pulse"></span> System Online
+            </div>
+        </section>
 
-        <div class="grid">
-            <div class="card">
-                <h3>🎨 My Patterns</h3>
+        <div class="dashboard-grid">
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="icon">🎨</span>
+                    <h3>My Patterns</h3>
+                </div>
                 <ul class="patterns-list" id="patternsList">
-                    <li>Loading patterns...</li>
+                    <li class="skeleton-text">Fetching your designs...</li>
                 </ul>
             </div>
 
-            <div class="card">
-                <h3>📡 Device Status</h3>
-                <p id="deviceStatus">
-                    <span class="device-indicator"></span>
-                    Device: Not Connected
-                </p>
-                <button class="btn" onclick="connectDevice()">Connect Device</button>
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="icon">📡</span>
+                    <h3>Device Status</h3>
+                </div>
+                <div class="status-content">
+                    <p id="deviceStatus">Disconnected</p>
+                    <button class="btn-primary" onclick="connectDevice()">Connect Loom</button>
+                </div>
             </div>
 
-            <div class="card">
-                <h3>🎭 3D Visualization</h3>
-                <p>View patterns in interactive 3D</p>
-                <button class="btn" onclick="open3DViewer()">Open Viewer</button>
+            <div class="glass-card">
+                <div class="card-header">
+                    <span class="icon">🎭</span>
+                    <h3>3D Visualization</h3>
+                </div>
+                <p class="card-description">Render patterns in interactive space.</p>
+                <button class="btn-secondary" onclick="open3DViewer()">Open Viewer</button>
             </div>
         </div>
-    </div>
+    </main>
 
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // Check if user is logged in, if not, redirect
-        auth.onAuthStateChanged(user => {
-            if (!user) window.location.href = 'login_signup.html';
-            else showDashboard(user);
-        });
-    </script>
-</body>
+    </body>
 </html>
