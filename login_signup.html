@@ -2,47 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HABI-LIN - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABI-LIN | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="header">
-        <h1>HABI-LIN</h1>
-        <p>Learning, Integration, and Navigation</p>
-    </div>
+<body class="auth-page">
+    <div class="auth-container">
+        <header class="auth-header">
+            <h1 class="logo">HABI<span>LIN</span></h1>
+            <p class="tagline">Learning, Integration, and Navigation</p>
+        </header>
 
-    <div class="container">
-        <div id="authSection" class="auth-section">
+        <div class="auth-card">
             <div id="alertContainer"></div>
-            <h2 id="formTitle" style="margin-bottom: 1.5rem; color: var(--primary);">🧵 Weaver Login</h2>
-
-            <div class="form-group">
-                <label for="email">📧 Email Address</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">🔒 Password</label>
-                <input type="password" id="password" required>
-            </div>
-            <div id="signupFields" style="display: none;">
-                <div class="form-group">
-                    <label for="role">👤 I am a:</label>
-                    <select id="role">
-                        <option value="traditional">Traditional Weaver</option>
-                        <option value="student">Weaving Student</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="displayName">✨ Full Name</label>
-                    <input type="text" id="displayName">
-                </div>
+            
+            <div class="auth-title-group">
+                <h2 id="formTitle">Weaver Login</h2>
+                <p id="formSubtitle">Enter your credentials to access your patterns.</p>
             </div>
 
-            <button class="btn" id="mainAuthBtn" onclick="handleAuth()">Login</button>
-            <button class="btn btn-secondary" onclick="toggleAuthMode()">Sign Up</button>
-            <div style="margin-top: 15px; text-align: center;">
-                <a href="about.html" style="color: var(--primary); font-size: 0.8rem;">About the Project</a>
+            <div class="form-wrapper">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="weaver@habilin.ph" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div id="signupFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="role">I am a:</label>
+                        <select id="role">
+                            <option value="traditional">Traditional Weaver</option>
+                            <option value="student">Weaving Student</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="displayName">Full Name</label>
+                        <input type="text" id="displayName" placeholder="Juan Dela Cruz">
+                    </div>
+                </div>
+
+                <div class="button-stack">
+                    <button class="btn-primary" id="mainAuthBtn" onclick="handleAuth()">Login</button>
+                    <div class="auth-divider"><span>or</span></div>
+                    <button class="btn-outline" id="toggleBtn" onclick="toggleAuthMode()">Create an Account</button>
+                </div>
             </div>
+
+            <footer class="auth-footer">
+                <a href="about.html">About the Project</a>
+            </footer>
         </div>
     </div>
 
