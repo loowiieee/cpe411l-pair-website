@@ -313,8 +313,18 @@ button {
 }
 
 /* Buttons and Dividers */
+
+.btn-outline:hover {
+    background: #f8fafc;
+    color: var(--text-main);
+    border-color: var(--text-muted);
+}
 .button-stack {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the items horizontally */
+    width: 100%;
 }
 
 .auth-divider {

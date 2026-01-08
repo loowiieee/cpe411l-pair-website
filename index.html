@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABI-LIN | Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for a hero landing page */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* Updated background with a thematic handloom image and a refined overlay */
+            background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+                url('http://googleusercontent.com/image_collection/image_retrieval/2638941359241475169_0');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Parallax effect for added elegance */
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: 8px;
+            font-weight: 300;
+            color: #1e293b;
+        }
+
+        .hero p {
+            color: #475569;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+
+        /* Animation for a smooth entrance */
+        .hero>* {
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1 class="logo">HABI<span>LIN</span></h1>
+        <p>Preserving the art of traditional weaving through modern integration and 3D visualization.</p>
+
+        <a href="login_signup.html" class="btn-elegant">
+            <span>Enter the Website</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+        </a>
+    </section>
+</body>
+
+</html>
