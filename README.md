@@ -1,1 +1,1 @@
-# cpe411l-pair-website
+This repository contains a modular web application designed for the HABI-LIN weaving platform, built using a clean HTML5, CSS3, and JavaScript stack. The architecture follows a single-page styling philosophy where a centralized style.css uses CSS Variables to maintain a consistent, elegant "Atelier" aesthetic across the landing, authentication, and dashboard modules. Backend operations are handled through Firebase integration, managing secure user sessions and real-time database synchronization for weaving patterns and device statuses.
